@@ -2,7 +2,10 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function formatName(user) {
-  return user.firstName + " " + user.lastName;
+  if (user) {
+    return user.firstName + " " + user.lastName;
+  }
+  return "Intet navn angivet!";
 }
 
 const user = {
@@ -10,14 +13,19 @@ const user = {
   lastName: "Petersen",
 };
 
+const element = (
+  <>
+    <p>Hej med dig - Vi tester indholdet nu</p>  
+  </>
+)
+
 function App() {
-  const element = <b>Hej {formatName(user)}</b>;
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {element} <code>src/App.js</code> and save to reload.
+        {formatName(user)} {element}
         </p>
         <a
           className="App-link"
@@ -25,7 +33,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn {formatName()}
         </a>
       </header>
     </div>
