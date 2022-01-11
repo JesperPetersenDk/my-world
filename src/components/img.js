@@ -1,6 +1,6 @@
-function imgView({imgUrl, altText})
+function ImgView({imgUrl, altText})
 {
     return <img src={imgUrl} alt={altText} />
 }
 
-export default imgView;
+export default ImgView;
