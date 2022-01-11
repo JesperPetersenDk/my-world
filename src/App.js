@@ -3,6 +3,7 @@ import Welcome from "./components/Welcome";
 import ImgView from "./components/img";
 import Sum from "./components/sum";
 import Btn from "./components/btn";
+import ConsoleBtn from "./components/ConsoleBtn";
 
 const user = {
   firstName: "Test",
@@ -22,6 +23,7 @@ function App() {
         <ImgView imgUrl={imgData.imgUrl} altText={imgData.altText} />
         <Sum a={23} b={22} />
         <Btn />
+        <ConsoleBtn/>
       </header>
     </div>
   );
